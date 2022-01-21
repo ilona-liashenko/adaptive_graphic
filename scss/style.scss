@@ -1,0 +1,55 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+body {
+    max-width: 1120px;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+}
+.main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.fashion {
+    &__subtitle {
+        @include fonts (16px, 24px, 0.5em);
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-family: "Red Hat Display", sans-serif;
+        @include fonts (48px, 64px, 0.5em);
+        margin-bottom: 65px;
+    }
+}
+.section {
+    margin-bottom: 130px;
+    &:first-child {
+        margin-top: 70px;
+        .section__image {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        font-family: "Red Hat Display", sans-serif;
+        @include fonts (23px, 38px, 0.1em);
+        margin-bottom: 40px;
+    }
+    &__text {
+        @include fonts (19px, 32px, 0.05em);
+        color: #565656;
+        margin-bottom: 20px;
+    }
+    &__image {
+        margin-bottom: 50px;
+        width: $fullWidth;
+    }
+}
+.overview {
+    &__text-wrap {
+        width: 50%;
+    }
+}
+
+@import "media-quer";

@@ -1,0 +1,45 @@
+// @media (max-width: 1120px) {
+
+// }
+@media (max-width: 768px) {
+    .fashion {
+        &__title {
+            font-family: "Red Hat Display", sans-serif;
+            font-size: 33px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    .section {
+        margin-bottom: 65px;
+        &:first-child {
+            margin-top: 112px;
+            .section__image {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .overview {
+        &__text-wrap {
+            width: $fullWidth;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .section {
+        &__picture-wrap {
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+        &__image {
+            position: absolute;
+            width: $fullWidth;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
